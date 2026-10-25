@@ -39,5 +39,5 @@ export function validateSignup(values) {
 
 export function successCopy({ name, role }) {
   const seat = role === "dm" ? "a new DM" : "a player";
-  return `${name}, your seat is saved as ${seat}. Nothing was sent. This stays in your browser.`;
+  return `${name}, your seat is saved as ${seat}.`;
 }

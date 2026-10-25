@@ -88,11 +88,11 @@ test("sign-up validation accepts a complete response and rejects empty fields", 
   assert.ok(empty.errors.consent);
 });
 
-test("success copy stays on the device and names the guest", () => {
+test("success copy names the guest and their seat", () => {
   const player = successCopy({ name: "Ada", role: "player" });
   assert.match(player, /Ada/);
   assert.match(player, /player/);
-  assert.match(player, /Nothing was sent/);
+  assert.doesNotMatch(player, /Nothing was sent/);
   const dm = successCopy({ name: "Grace", role: "dm" });
   assert.match(dm, /new DM/);
 });
