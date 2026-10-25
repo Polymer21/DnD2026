@@ -173,8 +173,8 @@ test("fonts stay Fraunces, Nunito Sans, and Caveat in the theme", () => {
 });
 
 test("the hero keeps the specified size, timing, and dot treatment", () => {
-  assert.match(base, /--hero-height:\s*720px/);
-  assert.match(base, /--hero-height:\s*860px/);
+  assert.match(base, /--hero-height:\s*calc\(720 \* 100svh \/ 844\)/);
+  assert.match(base, /--hero-height:\s*calc\(860 \* 100svh \/ 900\)/);
   assert.match(base, /--hero-fade:\s*600ms/);
   assert.match(hero, /ease-in-out/);
   assert.match(hero, /width:\s*8px/);
