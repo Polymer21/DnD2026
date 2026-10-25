@@ -1,0 +1,79 @@
+/*
+  Palette collection from Figma file bzRbkpsoUMyVFLwD2cy9RU (DnD-Design-26).
+  Exact hex values from the Palette variable modes.
+  color/focus-ring aliases color/border/focus.
+  Switch modes with data-palette="a" | "b" on the root element.
+
+  a  A Tavern — default. Warm cream and ember.
+  b  B Hearth Night — dark.
+*/
+
+:root {
+  --color-focus-ring: var(--color-border-focus);
+}
+
+:root[data-palette="a"] {
+  --color-bg-page: #f3ead7;
+  --color-bg-surface: #fbf5e8;
+  --color-bg-muted: #e8dbbf;
+  --color-bg-inverse: #5a3e2b;
+  --color-bg-placeholder: #e8dbbf;
+  --color-bg-input: #fbf5e8;
+  --color-bg-footer: #5a3e2b;
+  --color-bg-disabled: #e8dbbf;
+  --color-text-primary: #2b2622;
+  --color-text-secondary: #5a3e2b;
+  --color-text-link: #28625d;
+  --color-text-on-inverse: #f3ead7;
+  --color-text-on-accent: #2b2622;
+  --color-text-on-teal: #f3ead7;
+  --color-text-on-footer: #f3ead7;
+  --color-text-placeholder: #5a3e2b;
+  --color-text-disabled: #5a3e2b;
+  --color-text-error: #7a2e2e;
+  --color-accent: #d9772b;
+  --color-accent-hover: #c9a24a;
+  --color-accent-pressed: #c9a24a;
+  --color-gold: #c9a24a;
+  --color-teal: #2f6f6a;
+  --color-wine: #7a2e2e;
+  --color-border-default: #5a3e2b;
+  --color-border-subtle: #c9a24a;
+  --color-border-input: #5a3e2b;
+  --color-border-focus: #28625d;
+  --color-border-error: #7a2e2e;
+  --color-border-disabled: #5a3e2b;
+}
+
+:root[data-palette="b"] {
+  --color-bg-page: #1f1a16;
+  --color-bg-surface: #3a2a1e;
+  --color-bg-muted: #3a2a1e;
+  --color-bg-inverse: #f3ead7;
+  --color-bg-placeholder: #5a3e2b;
+  --color-bg-input: #3a2a1e;
+  --color-bg-footer: #f3ead7;
+  --color-bg-disabled: #3a2a1e;
+  --color-text-primary: #f3ead7;
+  --color-text-secondary: #c9a24a;
+  --color-text-link: #c9a24a;
+  --color-text-on-inverse: #2b2622;
+  --color-text-on-accent: #2b2622;
+  --color-text-on-teal: #f3ead7;
+  --color-text-on-footer: #2b2622;
+  --color-text-placeholder: #c9a24a;
+  --color-text-disabled: #c9a24a;
+  --color-text-error: #c9a24a;
+  --color-accent: #d9772b;
+  --color-accent-hover: #c9a24a;
+  --color-accent-pressed: #c9a24a;
+  --color-gold: #c9a24a;
+  --color-teal: #2f6f6a;
+  --color-wine: #7a2e2e;
+  --color-border-default: #c9a24a;
+  --color-border-subtle: #5a3e2b;
+  --color-border-input: #c9a24a;
+  --color-border-focus: #c9a24a;
+  --color-border-error: #c9a24a;
+  --color-border-disabled: #c9a24a;
+}
