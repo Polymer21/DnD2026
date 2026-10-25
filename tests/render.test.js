@@ -74,7 +74,12 @@ test("the guide, quiz, and sign-up pages render their frames", () => {
   assert.match(signupPage.body, /id="signup-name"/);
   assert.match(signupPage.body, /id="signup-email"/);
   assert.match(signupPage.body, /id="signup-timezone"/);
-  assert.match(signupPage.body, /id="signup-consent"/);
+  assert.match(signupPage.body, /id="signup-consent" name="consent" type="checkbox" value="yes"/);
+  assert.doesNotMatch(signupPage.body, /id="signup-consent"[^>]*checked/);
+  assert.match(signupPage.body, /name="website"/);
+  assert.match(signupPage.body, /tabindex="-1"/);
+  assert.match(signupPage.body, /autocomplete="off"/);
+  assert.match(signupPage.body, /aria-hidden="true"/);
   assert.match(signupPage.body, /value="player" checked/);
   assert.match(signupPage.body, /data-signup-state="ready"/);
   assert.match(signupPage.body, /Find My First Table/);

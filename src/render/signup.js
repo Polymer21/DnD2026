@@ -34,7 +34,7 @@ export function renderSignup(content) {
           <h1>${escapeHtml(form.title)}</h1>
           <p>${escapeHtml(form.lede)}</p>
         </header>
-        ${state === "error" ? `<p class="form-error" role="alert">${escapeHtml(form.errorTitle || "Check the highlighted fields.")}</p>` : ""}
+        <p class="form-error" role="alert" data-signup-error${state === "error" ? "" : " hidden"}>${state === "error" ? escapeHtml(form.errorTitle || "Check the highlighted fields.") : ""}</p>
         ${renderChoiceChips({
           name: "role",
           legend: form.roleLegend,
@@ -64,6 +64,10 @@ export function renderSignup(content) {
             <span>${escapeHtml("I agree to the ")}<a href="index.html#code">table code</a>: kind, beginner-safe, inclusive.</span>
           </label>
           ${fieldError("signup-consent", errors.consent)}
+        </div>
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="signup-website">Website</label>
+          <input id="signup-website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
         </div>
         <p class="form-status" data-signup-status${state === "submitting" ? "" : " hidden"}>Saving your seat…</p>
         ${renderPillArrowButton({ label: form.submit, type: "submit", variant: "primary" })}
