@@ -3,7 +3,7 @@ import { escapeHtml } from "../render/escape.js";
 export function renderArtSlot({ label, caption, credit = "", size = "" }) {
   const sized = size ? ` art-slot--${size}` : "";
   const creditHtml = credit
-    ? `<figcaption class="art-credit">${escapeHtml(credit)}</figcaption>`
+    ? `<figcaption class="art-credit">— ${escapeHtml(credit)}</figcaption>`
     : "";
   return `<figure class="art-slot${sized}">
     <div class="art-slot__frame">
