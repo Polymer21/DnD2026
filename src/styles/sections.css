@@ -3,8 +3,8 @@
 .path,
 .table-list {
   display: grid;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  gap: calc(24 * var(--d));
+  margin-top: calc(40 * var(--d));
 }
 
 .parchment-card,
@@ -22,24 +22,24 @@
 .table-card,
 .quiz-sample,
 .form-panel {
-  padding: 2rem;
+  padding: calc(32 * var(--d));
 }
 
 .parchment-card {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
   align-content: start;
 }
 
 .pin-row {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: calc(12 * var(--d));
 }
 
 .pin {
-  width: 12px;
-  height: 12px;
+  width: calc(12 * var(--d));
+  height: calc(12 * var(--d));
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--color-accent);
@@ -51,7 +51,7 @@
 .level-marker h3 {
   margin: 0;
   color: var(--color-text-primary);
-  font-size: 1.75rem;
+  font-size: clamp(16px, calc(28 * var(--d)), 35px);
   line-height: 1.2;
 }
 
@@ -59,7 +59,7 @@
 .guide-card p,
 .table-card p {
   color: var(--color-text-primary);
-  font-size: 1.125rem;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
   line-height: 1.55;
 }
 
@@ -74,9 +74,9 @@
 }
 
 .path-step h3 {
-  margin: 0.75rem 0 0.5rem;
+  margin: calc(12 * var(--d)) 0 calc(8 * var(--d));
   color: var(--color-text-primary);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(32px, calc(44 * 100vw / 1440), 55px);
   font-weight: var(--font-weight-display);
   letter-spacing: -0.02em;
   line-height: 1.14;
@@ -85,19 +85,19 @@
 .path-step p {
   margin: 0;
   color: var(--color-text-primary);
-  font-size: 1.125rem;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
   line-height: 1.55;
 }
 
 .path-step__track {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: calc(12 * var(--d));
 }
 
 .path-step__flame {
-  width: 14px;
-  height: 14px;
+  width: calc(14 * var(--d));
+  height: calc(14 * var(--d));
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--color-accent);
@@ -110,9 +110,9 @@
 }
 
 .path-step__num {
-  margin: 1rem 0 0;
+  margin: calc(16 * var(--d)) 0 0;
   color: var(--color-text-secondary);
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
   font-weight: var(--font-weight-strong);
   letter-spacing: 0.14em;
 }
@@ -120,8 +120,8 @@
 .guide-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1rem 1rem 1.5rem;
+  gap: calc(12 * var(--d));
+  padding: calc(16 * var(--d)) calc(16 * var(--d)) calc(24 * var(--d));
   color: inherit;
   text-decoration: none;
 }
@@ -131,7 +131,7 @@
 }
 
 .guide-card h3 {
-  font-size: 1.375rem;
+  font-size: clamp(16px, calc(22 * var(--d)), 27.5px);
 }
 
 .guide-card__more {
@@ -148,9 +148,9 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 0.5rem;
-  min-height: 160px;
-  padding: 1.5rem;
+  gap: calc(8 * var(--d));
+  min-height: max(44px, calc(160 * var(--d)));
+  padding: calc(24 * var(--d));
   border: 1px dashed var(--color-gold);
   border-radius: var(--radius-lg);
   background: var(--color-bg-placeholder);
@@ -158,27 +158,27 @@
 }
 
 .art-slot--wide .art-slot__frame {
-  min-height: 180px;
+  min-height: max(44px, calc(180 * var(--d)));
 }
 
 .art-slot--hero .art-slot__frame {
-  min-height: 420px;
+  min-height: max(44px, calc(420 * var(--d)));
 }
 
 .article-body .art-slot__frame {
-  min-height: 240px;
+  min-height: max(44px, calc(240 * var(--d)));
 }
 
 .signup-aside .art-slot__frame {
   width: 100%;
-  max-width: 520px;
-  min-height: 240px;
+  max-width: calc(520 * var(--d));
+  min-height: max(44px, calc(240 * var(--d)));
   aspect-ratio: 520 / 560;
 }
 
 .art-slot__label {
   color: var(--color-text-secondary);
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
   font-weight: var(--font-weight-strong);
   letter-spacing: 0.14em;
   line-height: 1.3;
@@ -188,7 +188,7 @@
 .art-credit {
   color: var(--color-text-secondary);
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
   font-weight: var(--font-weight-body);
   letter-spacing: 0;
   line-height: 1.45;
@@ -199,7 +199,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
   font-style: normal;
   font-weight: var(--font-weight-body);
   letter-spacing: 0;
@@ -221,19 +221,19 @@
 }
 
 .art-credit {
-  margin-top: 0.75rem;
+  margin-top: calc(12 * var(--d));
 }
 
 .match {
   display: grid;
-  gap: 2.5rem;
-  margin-top: 2.5rem;
+  gap: calc(40 * var(--d));
+  margin-top: calc(40 * var(--d));
 }
 
 .quiz-sample,
 .table-list {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
   align-content: start;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .quiz-sample h3 {
-  font-size: 1.75rem;
+  font-size: clamp(16px, calc(28 * var(--d)), 35px);
   font-weight: var(--font-weight-heading);
   letter-spacing: 0;
   line-height: 1.2;
@@ -263,7 +263,7 @@
 
 .table-card header {
   justify-content: space-between;
-  gap: 0.5rem 1rem;
+  gap: calc(8 * var(--d)) calc(16 * var(--d));
   flex-wrap: nowrap;
 }
 
@@ -274,11 +274,11 @@
 
 .badge-row {
   justify-content: flex-start;
-  gap: 8px;
+  gap: calc(8 * var(--d));
 }
 
 .table-card h3 {
-  margin-top: 0.25rem;
+  margin-top: calc(4 * var(--d));
 }
 
 .table-card .meta {
@@ -287,10 +287,10 @@
 
 .level-marker {
   display: grid;
-  gap: 0.75rem;
+  gap: calc(12 * var(--d));
   align-content: start;
-  min-height: 168px;
-  padding: 1.5rem;
+  min-height: max(44px, calc(168 * var(--d)));
+  padding: calc(24 * var(--d));
 }
 
 .level-marker--soon {
@@ -306,8 +306,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: calc(40 * var(--d));
+  height: calc(40 * var(--d));
   border-radius: var(--radius-pill);
   background: var(--color-accent);
   border: 1px solid var(--color-border-default);
@@ -323,13 +323,13 @@
 
 .dm {
   display: grid;
-  gap: 2.5rem;
+  gap: calc(40 * var(--d));
   align-items: center;
 }
 
 .dm-copy {
   display: grid;
-  gap: 1.5rem;
+  gap: calc(24 * var(--d));
   justify-items: start;
 }
 
@@ -341,7 +341,7 @@
 }
 
 .dm-copy h2 {
-  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-size: clamp(44px, calc(64 * 100vw / 1440), 80px);
   line-height: 1.05;
   color: var(--color-text-on-inverse);
 }
@@ -358,27 +358,27 @@
 
 .poster {
   display: grid;
-  gap: 1.5rem;
+  gap: calc(24 * var(--d));
   align-content: start;
 }
 
 .poster h2 {
   max-width: 12em;
-  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-size: clamp(44px, calc(72 * 100vw / 1440), 90px);
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .poster p {
-  font-size: 1.375rem;
+  font-size: clamp(16px, calc(22 * var(--d)), 27.5px);
   line-height: 1.45;
 }
 
 .page-intro {
   display: grid;
-  gap: 1.25rem;
-  max-width: 52rem;
-  padding-top: 2rem;
+  gap: calc(20 * var(--d));
+  max-width: calc(832 * var(--d));
+  padding-top: calc(32 * var(--d));
 }
 
 .page-intro h1,
@@ -386,16 +386,16 @@
 .signup-copy h1 {
   margin: 0;
   color: var(--color-text-primary);
-  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-size: clamp(44px, calc(64 * 100vw / 1440), 80px);
   line-height: 1.06;
 }
 
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: calc(8 * var(--d));
   color: var(--color-text-secondary);
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
   font-weight: var(--font-weight-strong);
 }
 
@@ -408,25 +408,25 @@
 
 .article {
   display: grid;
-  gap: 2.5rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  gap: calc(40 * var(--d));
+  padding-top: calc(80 * var(--d));
+  padding-bottom: calc(80 * var(--d));
 }
 
 .article-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: calc(40 * var(--d));
 }
 
 .article-body {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
 }
 
 .article-body h2 {
-  margin: 1.25rem 0 0;
+  margin: calc(20 * var(--d)) 0 0;
   color: var(--color-text-primary);
-  font-size: 1.75rem;
+  font-size: clamp(16px, calc(28 * var(--d)), 35px);
   font-weight: var(--font-weight-heading);
   letter-spacing: 0;
   line-height: 1.2;
@@ -434,20 +434,20 @@
 
 .article-body p {
   color: var(--color-text-primary);
-  font-size: 1.125rem;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
   line-height: 1.55;
 }
 
 .margin-card {
   display: grid;
-  gap: 1.5rem;
+  gap: calc(24 * var(--d));
   align-content: start;
 }
 
 .toc {
   display: grid;
-  gap: 0.35rem;
-  padding: 1.5rem;
+  gap: calc(5.6 * var(--d));
+  padding: calc(24 * var(--d));
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   background: var(--color-bg-surface);
@@ -458,7 +458,7 @@
   align-items: center;
   min-height: 44px;
   color: var(--color-text-primary);
-  font-size: 1.125rem;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
   text-decoration: none;
 }
 
@@ -467,31 +467,31 @@
 }
 
 .quiz-column {
-  width: min(45rem, 100%);
+  width: min(calc(720 * var(--d)), 100%);
   margin-inline: auto;
   display: grid;
-  gap: 1.5rem;
-  padding-block: 5rem 4rem;
+  gap: calc(24 * var(--d));
+  padding-block: calc(80 * var(--d)) calc(64 * var(--d));
 }
 
 .quiz-column h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(32px, calc(44 * 100vw / 1440), 55px);
   line-height: 1.14;
 }
 
 .quiz-column .choice-chips__list {
-  gap: 24px;
+  gap: calc(24 * var(--d));
 }
 
 .progress {
   display: flex;
-  gap: 6px;
+  gap: calc(6 * var(--d));
   list-style: none;
 }
 
 .progress li {
   flex: 1 1 0;
-  height: 6px;
+  height: calc(6 * var(--d));
   border-radius: var(--radius-pill);
   background: var(--color-bg-muted);
 }
@@ -502,7 +502,7 @@
 
 .quiz-step {
   display: grid;
-  gap: 1.25rem;
+  gap: calc(20 * var(--d));
 }
 
 .js .quiz-step {
@@ -515,48 +515,48 @@
 
 .quiz-results {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
 }
 
 .signup-split {
   display: grid;
-  gap: 3rem;
-  padding-block: 2rem 4rem;
+  gap: calc(48 * var(--d));
+  padding-block: calc(32 * var(--d)) calc(64 * var(--d));
   align-items: start;
 }
 
 .signup-aside {
   display: grid;
   align-content: start;
-  gap: 16px;
+  gap: calc(16 * var(--d));
 }
 
 .signup-form,
 .signup-copy,
 .signup-fields {
   display: grid;
-  gap: 24px;
+  gap: calc(24 * var(--d));
 }
 
 .signup-fields > .pill-arrow {
   justify-self: start;
   width: auto;
-  height: 56px;
-  min-height: 56px;
+  height: calc(56 * var(--d));
+  min-height: max(44px, calc(56 * var(--d)));
   padding-block: 0;
   white-space: nowrap;
 }
 
 .signup-fields .field input:not([type="checkbox"]),
 .signup-fields .field select {
-  height: 62px;
-  min-height: 62px;
+  height: calc(62 * var(--d));
+  min-height: max(44px, calc(62 * var(--d)));
   padding-block: 0;
 }
 
 .signup-fields .field > label {
-  font-size: 1.125rem;
-  line-height: 28px;
+  font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
+  line-height: clamp(16px, calc(28 * var(--d)), 35px);
 }
 
 .form-panel,
@@ -568,12 +568,12 @@
 .form-panel h2 {
   margin: 0;
   color: var(--color-text-primary);
-  font-size: 2rem;
+  font-size: clamp(16px, calc(32 * var(--d)), 40px);
 }
 
 .field {
   display: grid;
-  gap: 8px;
+  gap: calc(8 * var(--d));
 }
 
 .field label,
@@ -585,7 +585,7 @@
 .field__hint,
 .field__error {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
 }
 
 .field__hint {
@@ -605,23 +605,23 @@
 .site-footer {
   background: var(--color-bg-footer);
   color: var(--color-text-on-footer);
-  padding-block: 4rem 2.5rem;
+  padding-block: calc(64 * var(--d)) calc(40 * var(--d));
 }
 
 .footer-join {
   display: grid;
-  gap: 2.5rem;
+  gap: calc(40 * var(--d));
 }
 
 .footer-join h2 {
   color: var(--color-text-on-footer);
-  font-size: clamp(2.25rem, 4vw, 2.75rem);
+  font-size: clamp(36px, calc(44 * 100vw / 1440), 55px);
   line-height: 1.14;
 }
 
 .footer-copy {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
 }
 
 .footer-copy p,
@@ -631,13 +631,13 @@
 
 .footer-form {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
 }
 
 .footer-form input {
-  height: 62px;
-  min-height: 62px;
-  padding: 0.85rem 1.15rem;
+  height: calc(62 * var(--d));
+  min-height: max(44px, calc(62 * var(--d)));
+  padding: calc(13.6 * var(--d)) calc(18.4 * var(--d));
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
   background: var(--color-bg-surface);
@@ -651,29 +651,29 @@
 
 .footer-rule {
   height: 1px;
-  margin-block: 2.5rem;
+  margin-block: calc(40 * var(--d));
   border: 0;
   background: var(--color-gold);
 }
 
 .footer-bottom {
   display: grid;
-  gap: 1rem;
+  gap: calc(16 * var(--d));
 }
 
 .footer-bottom p,
 .footer-social,
 .footer-social li,
 .footer-social a {
-  font-size: 0.875rem;
+  font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
   font-weight: var(--font-weight-strong);
-  line-height: 18px;
+  line-height: clamp(16px, calc(18 * var(--d)), 22.5px);
 }
 
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
+  gap: calc(8 * var(--d)) calc(24 * var(--d));
   list-style: none;
 }
 
@@ -693,19 +693,19 @@
 }
 
 .palette-switch legend {
-  margin-bottom: 0.75rem;
+  margin-bottom: calc(12 * var(--d));
   color: var(--color-text-on-footer);
 }
 
 .palette-switch__options {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: calc(8 * var(--d));
 }
 
 .palette-switch button {
   min-height: 44px;
-  padding: 0 0.95rem;
+  padding: 0 calc(15.2 * var(--d));
   border: 1px solid var(--color-text-on-footer);
   border-radius: var(--radius-pill);
   color: var(--color-text-on-footer);
@@ -723,8 +723,8 @@
 
 .more-guides {
   display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: calc(16 * var(--d));
+  margin-top: calc(16 * var(--d));
 }
 
 @media (max-width: 759px) {
@@ -736,7 +736,7 @@
 
   .art-slot--hero .art-slot__frame,
   .art-slot--wide .art-slot__frame {
-    min-height: 220px;
+    min-height: max(44px, calc(220 * var(--d)));
   }
 }
 
@@ -760,7 +760,7 @@
   }
 
   .path {
-    gap: 2rem;
+    gap: calc(32 * var(--d));
   }
 
   .match,
@@ -769,7 +769,7 @@
   .signup-split,
   .footer-join {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-    gap: 2.5rem;
+    gap: calc(40 * var(--d));
   }
 
   .signup-split {
@@ -777,162 +777,162 @@
   }
 
   .article-grid {
-    grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.7fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(calc(256 * var(--d)), 0.7fr);
   }
 }
 
 @media (min-width: 900px) {
   .site-footer {
-    padding-block: 96px 40px;
+    padding-block: calc(96 * var(--d)) calc(40 * var(--d));
   }
 
   #cost.section {
-    padding-block: 160px;
+    padding-block: calc(160 * var(--d));
   }
 
   #cost .poster {
-    gap: 24px;
+    gap: calc(24 * var(--d));
   }
 
   #cost .poster > .eyebrow {
-    line-height: 18px;
+    line-height: clamp(16px, calc(18 * var(--d)), 22.5px);
   }
 
   .poster h2 {
     max-width: none;
-    font-size: 96px;
-    line-height: 96px;
+    font-size: clamp(16px, calc(96 * var(--d)), 120px);
+    line-height: clamp(16px, calc(96 * var(--d)), 120px);
   }
 
   #cost .poster p {
-    font-size: 22px;
-    line-height: 32px;
+    font-size: clamp(16px, calc(22 * var(--d)), 27.5px);
+    line-height: clamp(16px, calc(32 * var(--d)), 40px);
   }
 
   .article > .art-slot--wide .art-slot__frame {
-    min-height: 470px;
+    min-height: max(44px, calc(470 * var(--d)));
   }
 
   .article-grid {
-    grid-template-columns: minmax(0, 760px) 360px;
-    column-gap: 80px;
+    grid-template-columns: minmax(0, calc(760 * var(--d))) calc(360 * var(--d));
+    column-gap: calc(80 * var(--d));
     justify-content: space-between;
   }
 
   .signup-split {
-    grid-template-columns: minmax(0, 600px) minmax(0, 520px);
-    column-gap: 80px;
+    grid-template-columns: minmax(0, calc(600 * var(--d))) minmax(0, calc(520 * var(--d)));
+    column-gap: calc(80 * var(--d));
     justify-content: space-between;
   }
 }
 
 @media (min-width: 1440px) {
   .signup-split {
-    grid-template-columns: 600px 520px;
-    column-gap: 80px;
+    grid-template-columns: calc(600 * var(--d)) calc(520 * var(--d));
+    column-gap: calc(80 * var(--d));
     row-gap: 0;
     justify-content: start;
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: calc(80 * var(--d));
+    padding-bottom: calc(120 * var(--d));
   }
 
   .signup-copy .eyebrow {
-    line-height: 18px;
+    line-height: clamp(16px, calc(18 * var(--d)), 22.5px);
   }
 
   .signup-copy h1 {
-    font-size: 64px;
-    line-height: 68px;
+    font-size: clamp(16px, calc(64 * var(--d)), 80px);
+    line-height: clamp(16px, calc(68 * var(--d)), 85px);
     letter-spacing: -0.02em;
   }
 
   .signup-copy > p:not(.eyebrow) {
     color: var(--color-text-secondary);
-    font-size: 22px;
+    font-size: clamp(16px, calc(22 * var(--d)), 27.5px);
     font-weight: var(--font-weight-body);
-    line-height: 32px;
+    line-height: clamp(16px, calc(32 * var(--d)), 40px);
   }
 
   .signup-fields .choice-chips--cards .choice-chips__list {
     align-items: start;
-    gap: 16px;
+    gap: calc(16 * var(--d));
   }
 
   .signup-fields .choice-chip--card {
     height: auto;
     min-height: 0;
-    gap: 12px;
-    padding: 28px;
+    gap: calc(12 * var(--d));
+    padding: calc(28 * var(--d));
   }
 
   .signup-fields .choice-chip__kicker {
-    font-size: 0.875rem;
-    line-height: 18px;
+    font-size: clamp(14px, calc(14 * var(--d)), 17.5px);
+    line-height: clamp(16px, calc(18 * var(--d)), 22.5px);
   }
 
   .signup-fields .choice-chip__title {
-    font-size: 1.75rem;
-    line-height: 34px;
+    font-size: clamp(16px, calc(28 * var(--d)), 35px);
+    line-height: clamp(16px, calc(34 * var(--d)), 42.5px);
   }
 
   .signup-fields .choice-chip__body {
-    font-size: 1.125rem;
-    line-height: 28px;
+    font-size: clamp(16px, calc(18 * var(--d)), 22.5px);
+    line-height: clamp(16px, calc(28 * var(--d)), 35px);
   }
 
   .signup-fields .check {
-    min-height: 28px;
-    line-height: 28px;
+    min-height: calc(28 * var(--d));
+    line-height: clamp(16px, calc(28 * var(--d)), 35px);
   }
 
   .signup-fields .check input {
-    width: 20px;
-    height: 20px;
+    width: calc(20 * var(--d));
+    height: calc(20 * var(--d));
     min-height: 0;
     flex: 0 0 auto;
   }
 
   .signup-fields > .pill-arrow {
-    width: 219px;
-    padding-inline: 18px;
+    width: calc(219 * var(--d));
+    padding-inline: calc(18 * var(--d));
   }
 
   .signup-aside {
-    width: 520px;
+    width: calc(520 * var(--d));
   }
 
   .signup-aside .art-slot__frame {
-    width: 520px;
+    width: calc(520 * var(--d));
     max-width: none;
-    height: 560px;
-    min-height: 560px;
+    height: calc(560 * var(--d));
+    min-height: max(44px, calc(560 * var(--d)));
     aspect-ratio: auto;
   }
 
   .signup-aside .art-credit {
-    margin-top: 16px;
-    min-height: 100px;
+    margin-top: calc(16 * var(--d));
+    min-height: max(44px, calc(100 * var(--d)));
   }
 
   .site-footer .eyebrow {
-    height: 18px;
-    line-height: 18px;
+    height: calc(18 * var(--d));
+    line-height: clamp(16px, calc(18 * var(--d)), 22.5px);
   }
 
   .footer-join h2 {
-    height: 50px;
-    font-size: 44px;
-    line-height: 50px;
+    height: calc(50 * var(--d));
+    font-size: clamp(16px, calc(44 * var(--d)), 55px);
+    line-height: clamp(16px, calc(50 * var(--d)), 62.5px);
   }
 
   .footer-copy > p:not(.eyebrow) {
-    height: 28px;
-    line-height: 28px;
+    height: calc(28 * var(--d));
+    line-height: clamp(16px, calc(28 * var(--d)), 35px);
   }
 
   .footer-form .pill-arrow {
-    height: 56px;
-    min-height: 56px;
+    height: calc(56 * var(--d));
+    min-height: max(44px, calc(56 * var(--d)));
     padding-block: 0;
   }
 }
