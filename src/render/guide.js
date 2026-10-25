@@ -16,16 +16,6 @@ export function renderGuide(content) {
         `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.toc)}</a>`,
     )
     .join("");
-  const more = content.more
-    .map(
-      (item) => `<article class="article" id="${escapeHtml(item.id)}">
-        <p class="eyebrow">${escapeHtml(item.kicker)}</p>
-        <h2>${escapeHtml(item.title)}</h2>
-        <p>${escapeHtml(item.lede)}</p>
-        <p>${escapeHtml(item.body)}</p>
-      </article>`,
-    )
-    .join("");
 
   return `<article class="wrap article" id="${escapeHtml(article.id)}">
     <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -55,10 +45,6 @@ export function renderGuide(content) {
           ${toc}
         </nav>
       </aside>
-    </div>
-    <div class="more-guides">
-      <h2>More beginner guides</h2>
-      ${more}
     </div>
   </article>`;
 }

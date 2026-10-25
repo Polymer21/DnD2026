@@ -177,7 +177,7 @@
   height: 100%;
   margin-inline: auto;
   padding-top: 112px;
-  padding-bottom: 7.5rem;
+  padding-bottom: 58px;
 }
 
 .hero__copy {
@@ -222,7 +222,7 @@
   right: max(var(--page-gutter), calc((100% - var(--content-max)) / 2));
   bottom: 40px;
   display: flex;
-  gap: 12px;
+  gap: 8px;
 }
 
 .hero__dot {
@@ -230,18 +230,18 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: transparent;
-  box-shadow: inset 0 0 0 1.5px var(--color-text-on-inverse);
+  background: var(--color-bg-muted);
+  box-shadow: none;
 }
 
 .hero__dot::before {
   content: "";
   position: absolute;
-  inset: -8px;
+  inset: -18px;
 }
 
 .hero__dot[aria-current="true"] {
-  background: var(--color-text-on-inverse);
+  background: var(--color-accent);
   box-shadow: none;
 }
 
@@ -249,7 +249,7 @@
   position: absolute;
   z-index: 2;
   left: max(var(--page-gutter), calc((100% - var(--content-max)) / 2));
-  bottom: 28px;
+  bottom: 30px;
   margin: 0;
   color: var(--color-text-on-inverse);
   font-size: 0.875rem;
@@ -266,10 +266,19 @@
     text-align: left;
   }
 
+  .hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: var(--hero-height);
+  }
+
   .hero__layout {
+    height: auto;
+    flex: 1 0 auto;
     justify-content: flex-start;
     padding-top: 250px;
-    padding-bottom: 5.5rem;
+    padding-bottom: 1rem;
   }
 
   .hero__copy {
@@ -282,8 +291,12 @@
   }
 
   .hero__dots {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    align-self: flex-end;
     gap: 0;
-    bottom: 64px;
+    margin: 0.25rem var(--page-gutter) 0.5rem;
   }
 
   .hero__dot {
@@ -300,7 +313,8 @@
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 1.5px var(--color-text-on-inverse);
+    background: var(--color-bg-muted);
+    box-shadow: none;
     transform: translate(-50%, -50%);
   }
 
@@ -309,13 +323,16 @@
   }
 
   .hero__dot[aria-current="true"]::before {
-    background: var(--color-text-on-inverse);
+    background: var(--color-accent);
     box-shadow: none;
   }
 
   .hero__credit {
-    bottom: 16px;
-    max-width: calc(100% - 7rem);
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: none;
+    margin: 0 var(--page-gutter) 1.5rem;
   }
 
   .js .nav-toggle {

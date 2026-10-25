@@ -148,36 +148,66 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
   min-height: 160px;
-  padding: 1.25rem;
-  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-lg);
   background: var(--color-bg-placeholder);
   text-align: center;
 }
 
 .art-slot--wide .art-slot__frame {
-  min-height: 280px;
+  min-height: 180px;
 }
 
 .art-slot--hero .art-slot__frame {
   min-height: 420px;
 }
 
+.article-body .art-slot__frame {
+  min-height: 240px;
+}
+
+.signup-aside .art-slot__frame {
+  width: 300px;
+  height: 330px;
+  min-height: 330px;
+}
+
 .art-slot__label,
 .art-credit {
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
   font-size: 0.875rem;
   font-weight: var(--font-weight-strong);
+  letter-spacing: 0.14em;
   line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .art-slot__caption {
   margin: 0;
   color: var(--color-text-primary);
-  font-family: var(--font-accent);
-  font-size: 1.625rem;
-  line-height: 1.15;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: var(--font-weight-body);
+  letter-spacing: 0;
+  line-height: 1.55;
+  text-transform: none;
+}
+
+.section--inverse .art-slot__frame {
+  background: var(--color-bg-placeholder);
+}
+
+.section--inverse .art-slot__label,
+.section--inverse .art-credit {
+  color: var(--color-text-secondary);
+}
+
+.section--inverse .art-slot__caption {
+  color: var(--color-text-primary);
 }
 
 .art-credit {
@@ -218,9 +248,23 @@
 .badge-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
   align-items: center;
+}
+
+.table-card header {
   justify-content: space-between;
+  gap: 0.5rem 1rem;
+  flex-wrap: nowrap;
+}
+
+.table-card header p {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.badge-row {
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .table-card h3 {
@@ -276,6 +320,14 @@
 .dm-copy {
   display: grid;
   gap: 1.5rem;
+  justify-items: start;
+}
+
+.dm-copy .pill-arrow,
+.quiz-sample > .pill-arrow,
+.table-card > .pill-arrow {
+  justify-self: start;
+  width: auto;
 }
 
 .dm-copy h2 {
@@ -298,13 +350,14 @@
   display: grid;
   gap: 1.5rem;
   align-content: center;
-  min-height: 24rem;
+  padding-block: 2.5rem;
 }
 
 .poster h2 {
-  max-width: 16ch;
-  font-size: clamp(3.25rem, 6.5vw, 6rem);
+  max-width: 12em;
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .poster p {
@@ -346,8 +399,9 @@
 
 .article {
   display: grid;
-  gap: 2rem;
-  padding-bottom: var(--space-section);
+  gap: 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .article-grid {
@@ -407,8 +461,17 @@
   width: min(45rem, 100%);
   margin-inline: auto;
   display: grid;
-  gap: 1.25rem;
-  padding-block: 2rem 4rem;
+  gap: 1.5rem;
+  padding-block: 5rem 4rem;
+}
+
+.quiz-column h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.14;
+}
+
+.quiz-column .choice-chips__list {
+  gap: 24px;
 }
 
 .progress {
@@ -421,7 +484,7 @@
   flex: 1 1 0;
   height: 6px;
   border-radius: var(--radius-pill);
-  background: var(--color-border-subtle);
+  background: var(--color-bg-muted);
 }
 
 .progress li.is-complete {
@@ -454,9 +517,10 @@
 }
 
 .signup-form,
-.signup-copy {
+.signup-copy,
+.signup-fields {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .form-panel,
@@ -473,7 +537,7 @@
 
 .field {
   display: grid;
-  gap: 0.4rem;
+  gap: 8px;
 }
 
 .field label,
@@ -579,7 +643,7 @@
 }
 
 .palette-switch {
-  margin-top: 1.5rem;
+  display: none;
 }
 
 .palette-switch legend {
@@ -673,6 +737,32 @@
 
 @media (min-width: 900px) {
   .site-footer {
-    padding-block: 6rem 2.5rem;
+    padding-block: 96px 40px;
+  }
+
+  #cost.section {
+    padding-block: 160px;
+  }
+
+  .poster h2 {
+    max-width: none;
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .article > .art-slot--wide .art-slot__frame {
+    min-height: 470px;
+  }
+
+  .article-grid {
+    grid-template-columns: minmax(0, 760px) 360px;
+    column-gap: 80px;
+    justify-content: space-between;
+  }
+
+  .signup-split {
+    grid-template-columns: minmax(0, 600px) minmax(0, 520px);
+    column-gap: 80px;
+    justify-content: space-between;
   }
 }

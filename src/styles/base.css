@@ -164,7 +164,7 @@ main:focus-visible {
 
 .margin-note {
   margin: 0;
-  color: var(--color-text-secondary);
+  color: var(--color-text-link);
   font-family: var(--font-accent);
   font-size: 1.625rem;
   font-weight: 400;
@@ -193,7 +193,25 @@ main:focus-visible {
 .section-header {
   display: grid;
   gap: 1rem;
-  max-width: 40rem;
+  max-width: 46rem;
+}
+
+.section-header .eyebrow,
+.poster > .eyebrow,
+.dm-copy > .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-header .eyebrow::before,
+.poster > .eyebrow::before,
+.dm-copy > .eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  flex: 0 0 auto;
+  background: var(--color-accent);
 }
 
 .section-header h2 {
@@ -207,7 +225,6 @@ main:focus-visible {
 
 .section--inverse .section-header h2,
 .section--inverse .eyebrow,
-.section--inverse .margin-note,
 .section--inverse p {
   color: var(--color-text-on-inverse);
 }
